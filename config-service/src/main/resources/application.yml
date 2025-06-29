@@ -1,12 +1,15 @@
 server:
   port: 8081
+
 spring:
+  application:
+    name: config-service
+
   cloud:
     config:
       server:
         git:
-          default-label: config-server
           uri: https://github.com/CeroHex/springboot_microserviciosvehiculos
-          search-paths: config-data
-  application:
-    name: config-service
+          default-label: master              # Asegúrate que 'main' es la rama correcta
+          search-paths:
+            - config-data                 # Asegúrate que esta carpeta existe en el repo
