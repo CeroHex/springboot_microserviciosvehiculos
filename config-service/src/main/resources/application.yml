@@ -9,7 +9,6 @@ spring:
     config:
       server:
         git:
+          default-label: master
           uri: https://github.com/CeroHex/springboot_microserviciosvehiculos
-          default-label: master              # Asegúrate que 'main' es la rama correcta
-          search-paths:
-            - config-data                 # Asegúrate que esta carpeta existe en el repo
+          search-paths: config-data
