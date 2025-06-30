@@ -18,7 +18,6 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 5s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
-            recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
         bikesCB:
             permittedNumberOfCallsInHalfOpenState: 3
             slidingWindowType: TIME_BASED
@@ -26,7 +25,6 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 5s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
-            recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
         allCB:
             permittedNumberOfCallsInHalfOpenState: 3
             slidingWindowType: TIME_BASED
@@ -34,4 +32,3 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 5s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
-            recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
