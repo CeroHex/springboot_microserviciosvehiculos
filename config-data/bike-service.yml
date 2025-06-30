@@ -8,3 +8,17 @@ eureka:
       default-zone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+management:
+  tracing:
+    sampling:
+      probability: 1.0 # 100% de las solicitudes serán trazadas (solo en desarrollo)
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+# Opcional: expone endpoints para observabilidad
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
