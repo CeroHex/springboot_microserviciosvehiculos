@@ -30,3 +30,8 @@ spring:
           uri: lb://bike-service
           predicates:
             - Path=/bike/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
